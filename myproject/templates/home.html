@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- django template tags \{percent percent}, variables \{{variable}}, filter, and also has inheritance-->
+{% load static %} <!--loads django's template system's static file handling capabilities-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!--static tag from loads static enables static url generation. this is through the templating engine. kinda like a mtethod, so it knows to concatenate. static tag grabs static_url from settings.!-->
+</head>
+<body>
+    <h1>Home</h1>
+    <p>Check out my <a href = "/about">About</a> page.</p>
+</body>
+</html>
