@@ -44,3 +44,10 @@ a {
 a:hover {
     opacity: .85;
 }
+
+.banner {
+    display: block;
+    /* margin: auto; this is how to center in block display otherwise, use flex if want jusitfy content */
+    width: 100%;
+    max-width: 300px
+}

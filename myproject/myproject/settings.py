@@ -123,6 +123,11 @@ STATICFILES_DIRS = [ # this is if we have more static directories within specifi
     os.path.join(BASE_DIR, 'static') # base dir is outer myproject
 ]
 
+# where we are going to find images
+MEDIA_URL = 'media/'
+# where the directory is going to be
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

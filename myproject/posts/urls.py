@@ -1,8 +1,10 @@
 from django.urls import path
 from . import views # from this current package
 
+app_name = "posts"
+
 urlpatterns = [
-    path('', views.posts_list, name="posts"), # already in posts path as far as django is concerened
+    path('', views.posts_list, name="list"), # already in posts path as far as django is concerened
     path('<slug:slug>', views.post_page, name="page"), # already in posts path as far as django is concerened
 ]
 

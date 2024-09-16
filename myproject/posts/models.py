@@ -11,7 +11,12 @@ class Post(models.Model): # models.Model makes this a model
     body = models.TextField() # relates to text area form area.
     slug = models.SlugField() # the defining part of the URl or the Post (ex. ourdomain.com/post/this-is-a-slug-article) -> identifies the object / post
     date = models.DateTimeField(auto_now_add=True) # does not show up in admin bc it is auto
+    banner = models.ImageField(default='fallback.png', blank=True)
+        # imagefield only works with pillow?
+        # blank = true means not requiring images.
+        # in admin, it'll also allow you to upload photos!
 
     # methods -> returns title of the post object is printed
     def __str__(self) -> str:
         return self.title
+

@@ -11,7 +11,7 @@
         {% for post in posts %} <!-- this is normal type of template tag -->
             <article class="post">
                 <h2>
-                    <a href="{% url 'page' slug=post.slug %}"> <!-- notice passing in the slug into the url named page-->
+                    <a href="{% url 'posts:page' slug=post.slug %}"> <!-- notice passing in the slug into the url named page-->
                         {{ post.title }}
                     </a>
                 </h2>
