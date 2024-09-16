@@ -2,9 +2,22 @@
 <!--refers to templates dir in settings (top level templates). if we want a specific app layout, use posts/layout.html-->
 
 {% block title %}
-    Posts List
+    Posts
 {% endblock title %}
 
 {% block content %}
-    <h1>Posts List</h1>
+    <section>
+        <h1>Posts</h1>
+        {% for post in posts %} <!-- this is normal type of template tag -->
+            <article class="post">
+                <h2>
+                    <a href="{% url 'page' slug=post.slug %}"> <!-- notice passing in the slug into the url named page-->
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <p>{{ post.date }}</p>
+                <p>{{ post.body }}</p>
+            </article>
+        {% endfor %}
+    </section>
 {% endblock content%}
